@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>KnicksUniverse – Player Ratings</title>
+  <meta name="description" content="Fan voting for KnicksUniverse.com — rate Knicks players 10 (GOAT) to 1 (Trash). Votes are stored via Google Forms without leaving the page." />
+  <style>
+    :root {
+      --knicks-blue: #006BB6;
+      --text-muted: #666;
+      --card-bg: #ffffff;
+      --border: #dddddd;
+      --shadow: 0 2px 6px rgba(0,0,0,0.06);
+      --radius: 12px;
+      --success: #0a7d32;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; padding: 24px;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f7f7f7;
+      color: #111;
+    }
+    h1 {
+      font-size: 24px; margin: 0 0 16px; color: var(--knicks-blue);
+      text-align: center;
+    }
+    p.lead {
+      margin: 0 auto 28px;
+      max-width: 780px;
+      text-align: center;
+      color: var(--text-muted);
+    }
+    .ku-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 20px;
+      align-items: stretch;
+    }
+    .ku-card {
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 16px;
+      text-align: center;
+      background: var(--card-bg);
+      box-shadow: var(--shadow);
+      display: flex; flex-direction: column; justify-content: flex-start;
+      position: relative;
+    }
+    .ku-imgwrap {
+      background: #ffffff;
+      border-radius: 10px;
+      padding: 6px;
+      margin-bottom: 8px;
+    }
+    .ku-img {
+      width: 100%;
+      border-radius: 10px;
+      background: #ffffff;
+      display: block;
+    }
+    .ku-name {
+      margin: 10px 0 4px 0;
+      font-size: 18px;
+      color: var(--knicks-blue);
+    }
+    .ku-avg {
+      margin-bottom: 10px;
+      font-size: 14px;
+      color: var(--text-muted);
+    }
+    .ku-label {
+      color: var(--knicks-blue);
+      display: inline-block;
+      margin-bottom: 6px;
+      font-weight: 600;
+    }
+    .ku-select, .ku-submit {
+      width: 100%;
+      border-radius: 6px;
+      font-size: 15px;
+    }
+    .ku-select {
+      padding: 6px 10px;
+      border: 1px solid #ccc;
+      margin-bottom: 10px;
+      background: #fff;
+    }
+    .ku-submit {
+      background: var(--knicks-blue);
+      color: #fff;
+      border: none;
+      padding: 9px 14px;
+      cursor: pointer;
+      transition: opacity .15s ease;
+    }
+    .ku-submit[disabled] { opacity: .6; cursor: default; }
+    .ku-submit:hover:not([disabled]) { opacity: .92; }
+    .ku-confirm {
+      display: none;
+      margin-top: 8px;
+      font-size: 13px;
+      color: var(--success);
+      font-weight: 600;
+    }
+    .ku-confirm.show { display: block; }
+    .ku-footnote {
+      margin-top: 28px;
+      font-size: 12px;
+      color: var(--text-muted);
+      text-align: center;
+    }
+    @media (max-width: 360px){
+      body { padding: 16px; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Hidden target to swallow the Google Forms response and avoid navigation -->
+  <iframe name="ku_hidden_submit" style="display:none;"></iframe>
+
+  <h1>KnicksUniverse – Fan Player Ratings</h1>
+  <p class="lead">
+    Rate each player from <strong>10 (GOAT 🐐)</strong> down to <strong>1 (Trash 🗑️)</strong>. 
+    Your vote is recorded instantly without leaving this page.
+  </p>
+
+  <div class="ku-grid" id="ku-grid">
+    <!-- Jalen Brunson (PG) -->
+    <form class="ku-card" action="https://docs.google.com/forms/d/e/1FAIpQLScvM9p2kU6Lb2551I4epCyUqJ_QvGO7ANAbRnNuAK9fVYhjZA/formResponse" method="POST" target="ku_hidden_submit">
+      <div class="ku-imgwrap">
+        <img class="ku-img" src="https://cdn.nba.com/headshots/nba/latest/1040x760/1628973.png" alt="Jalen Brunson">
+      </div>
+      <h3 class="ku-name">Jalen Brunson (PG)</h3>
+      <p class="ku-avg">Avg Fan Score: <strong>—</strong></p>
+      <label class="ku-label" for="brunson">Your Rating:</label>
+      <select class="ku-select" name="entry.BRUNSON_ID" id="brunson" required>
+        <option value="" disabled selected>Select your rating</option>
+        <option>10 – GOAT 🐐</option><option>9 – All-Star ⭐️</option><option>8 – Starter 🔥</option>
+        <option>7 – Solid 💪</option><option>6 – Rotation 🔄</option><option>5 – Average 🟰</option>
+        <option>4 – Below Average 💤</option><option>3 – Bench Warmer 🪑</option><option>2 – G-League 🌴</option>
+        <option>1 – Trash 🗑️</option>
+      </select>
+      <button class="ku-submit" type="submit">Submit</button>
+      <div class="ku-confirm">Thanks! Your vote for Jalen Brunson was recorded.</div>
+    </form>
+
+    <!-- Karl-Anthony Towns (C/PF) -->
+    <form class="ku-card" action="https://docs.google.com/forms/d/e/1FAIpQLScvM9p2kU6Lb2551I4epCyUqJ_QvGO7ANAbRnNuAK9fVYhjZA/formResponse" method="POST" target="ku_hidden_submit">
+      <div class="ku-imgwrap">
+        <img class="ku-img" src="https://cdn.nba.com/headshots/nba/latest/1040x760/1626157.png" alt="Karl-Anthony Towns">
+      </div>
+      <h3 class="ku-name">Karl-Anthony Towns (C/PF)</h3>
+      <p class="ku-avg">Avg Fan Score: <strong>—</strong></p>
+      <label class="ku-label" for="towns">Your Rating:</label>
+      <select class="ku-select" name="entry.TOWNS_ID" id="towns" required>
+        <option value="" disabled selected>Select your rating</option>
+        <option>10 – GOAT 🐐</option><option>9 – All-Star ⭐️</option><option>8 – Starter 🔥</option>
+        <option>7 – Solid 💪</option><option>6 – Rotation 🔄</option><option>5 – Average 🟰</option>
+        <option>4 – Below Average 💤</option><option>3 – Bench Warmer 🪑</option><option>2 – G-League 🌴</option>
+        <option>1 – Trash 🗑️</option>
+      </select>
+      <button class="ku-submit" type="submit">Submit</button>
+      <div class="ku-confirm">Thanks! Your vote for Karl-Anthony Towns was recorded.</div>
+    </form>
+
+    <!-- OG Anunoby (SF) -->
+    <form class="ku-card" action="https://docs.google.com/forms/d/e/1FAIpQLScvM9p2kU6Lb2551I4epCyUqJ_QvGO7ANAbRnNuAK9fVYhjZA/formResponse" method="POST" target="ku_hidden_submit">
+      <div class="ku-imgwrap">
+        <img class="ku-img" src="https://cdn.nba.com/headshots/nba/latest/1040x760/1628384.png" alt="OG Anunoby">
+      </div>
+      <h3 class="ku-name">OG Anunoby (SF)</h3>
+      <p class="ku-avg">Avg Fan Score: <strong>—</strong></p>
+      <label class="ku-label" for="anunoby">Your Rating:</label>
+      <select class="ku-select" name="entry.ANUNOBY_ID" id="anunoby" required>
+        <option value="" disabled selected>Select your rating</option>
+        <option>10 – GOAT 🐐</option><option>9 – All-Star ⭐️</option><option>8 – Starter 🔥</option>
+        <option>7 – Solid 💪</option><option>6 – Rotation 🔄</option><option>5 – Average 🟰</option>
+        <option>4 – Below Average 💤</option><option>3 – Bench Warmer 🪑</option><option>2 – G-League 🌴</option>
+        <option>1 – Trash 🗑️</option>
+      </select>
+      <button class="ku-submit" type="submit">Submit</button>
+      <div class="ku-confirm">Thanks! Your vote for OG Anunoby was recorded.</div>
+    </form>
+
+    <!-- Mikal Bridges (SG/SF) -->
+    <form class="ku-card" action="https://docs.google.com/forms/d/e/1FAIpQLScvM9p2kU6Lb2551I4epCyUqJ_QvGO7ANAbRnNuAK9fVYhjZA/formResponse" method="POST" target="ku_hidden_submit">
+      <div class="ku-imgwrap">
+        <img class="ku-img" src="https://cdn.nba.com/headshots/nba/latest/1040x760/1628969.png" alt="Mikal Bridges">
+      </div>
+      <h3 class="ku-name">Mikal Bridges (SG/SF)</h3>
+      <p class="ku-avg">Avg Fan Score: <strong>—</strong></p>
+      <label class="ku-label" for="bridges">Your Rating:</label>
+      <select class="ku-select" name="entry.BRIDGES_ID" id="bridges" required>
+        <option value="" disabled selected>Select your rating</option>
+        <option>10 – GOAT 🐐</option><option>9 – All-Star ⭐️</option><option>8 – Starter 🔥</option>
+        <option>7 – Solid 💪</option><option>6 – Rotation 🔄</option><option>5 – Average 🟰</option>
+        <option>4 – Below Average 💤</option><option>3 – Bench Warmer 🪑</option><option>2 – G-League 🌴</option>
+        <option>1 – Trash 🗑️</option>
+      </select>
+      <button class="ku-submit" type="submit">Submit</button>
+      <div class="ku-confirm">Thanks! Your vote for Mikal Bridges was recorded.</div>
+    </form>
+
+    <!-- Josh Hart (SG/SF) -->
+    <form class="ku-card" action="https://docs.google.com/forms/d/e/1FAIpQLScvM9p2kU6Lb2551I4epCyUqJ_QvGO7ANAbRnNuAK9fVYhjZA/formResponse" method="POST" target="ku_hidden_submit">
+      <div class="ku-imgwrap">
+        <img class="ku-img" src="https://cdn.nba.com/headshots/nba/latest/1040x760/1628404.png" alt="Josh Hart">
+      </div>
+      <h3 class="ku-name">Josh Hart (SG/SF)</h3>
+      <p class="ku-avg">Avg Fan Score: <strong>—</strong></p>
+      <label class="ku-label" for="hart">Your Rating:</label>
+      <select class="ku-select" name="entry.HART_ID" id="hart" required>
+        <option value="" disabled selected>Select your rating</option>
+        <option>10 – GOAT 🐐</option><option>9 – All-Star ⭐️</option><option>8 – Starter 🔥</option>
+        <option>7 – Solid 💪</option><option>6 – Rotation 🔄</option><option>5 – Average 🟰</option>
+        <option>4 – Below Average 💤</option><option>3 – Bench Warmer 🪑</option><option>2 – G-League 🌴</option>
+        <option>1 – Trash 🗑️</option>
+      </select>
+      <button class="ku-submit" type="submit">Submit</button>
+      <div class="ku-confirm">Thanks! Your vote for Josh Hart was recorded.</div>
+    </form>
+
+    <!-- Mitchell Robinson (C) -->
+    <form class="ku-card" action="https://docs.google.com/forms/d/e/1FAIpQLScvM9p2kU6Lb2551I4epCyUqJ_QvGO7ANAbRnNuAK9fVYhjZA/formResponse" method="POST" target="ku_hidden_submit">
+      <div class="ku-imgwrap">
+        <img class="ku-img" src="https://cdn.nba.com/headshots/nba/latest/1040x760/1629011.png" alt="Mitchell Robinson">
+      </div>
+      <h3 class="ku-name">Mitchell Robinson (C)</h3>
+      <p class="ku-avg">Avg Fan Score: <strong>—</strong></p>
+      <label class="ku-label" for="robinson">Your Rating:</label>
+      <select class="ku-select" name="entry.ROBINSON_ID" id="robinson" required>
+        <option value="" disabled selected>Select your rating</option>
+        <option>10 – GOAT 🐐</option><option>9 – All-Star ⭐️</option><option>8 – Starter 🔥</option>
+        <option>7 – Solid 💪</option><option>6 – Rotation 🔄</option><option>5 – Average 🟰</option>
+        <option>4 – Below Average 💤</option><option>3 – Bench Warmer 🪑</option><option>2 – G-League 🌴</option>
+        <option>1 – Trash 🗑️</option>
+      </select>
+      <button class="ku-submit" type="submit">Submit</button>
+      <div class="ku-confirm">Thanks! Your vote for Mitchell Robinson was recorded.</div>
+    </form>
+
+    <!-- Miles “Deuce” McBride (PG/SG) -->
+    <form class="ku-card" action="https://docs.google.com/forms/d/e/1FAIpQLScvM9p2kU6Lb2551I4epCyUqJ_QvGO7ANAbRnNuAK9fVYhjZA/formResponse" method="POST" target="ku_hidden_submit">
+      <div class="ku-imgwrap">
+        <img class="ku-img" src="https://cdn.nba.com/headshots/nba/latest/1040x760/1630540.png" alt="Miles 'Deuce' McBride">
+      </div>
+      <h3 class="ku-name">Miles “Deuce” McBride (PG/SG)</h3>
+      <p class="ku-avg">Avg Fan Score: <strong>—</strong></p>
+      <label class="ku-label" for="mcbride">Your Rating:</label>
+      <select class="ku-select" name="entry.MCBRIDE_ID" id="mcbride" required>
+        <option value="" disabled selected>Select your rating</option>
+        <option>10 – GOAT 🐐</option><option>9 – All-Star ⭐️</option><option>8 – Starter 🔥</option>
+        <option>7 – Solid 💪</option><option>6 – Rotation 🔄</option><option>5 – Average 🟰</option>
+        <option>4 – Below Average 💤</option><option>3 – Bench Warmer 🪑</option><option>2 – G-League 🌴</option>
+        <option>1 – Trash 🗑️</option>
+      </select>
+      <button class="ku-submit" type="submit">Submit</button>
+      <div class="ku-confirm">Thanks! Your vote for Miles McBride was recorded.</div>
+    </form>
+
+    <!-- Jordan Clarkson (PG/SG) -->
+    <form class="ku-card" action="https://docs.google.com/forms/d/e/1FAIpQLScvM9p2kU6Lb2551I4epCyUqJ_QvGO7ANAbRnNuAK9fVYhjZA/formResponse" method="POST" target="ku_hidden_submit">
+      <div class="ku-imgwrap">
+        <img class="ku-img" src="https://cdn.nba.com/headshots/nba/latest/1040x760/203903.png" alt="Jordan Clarkson">
+      </div>
+      <h3 class="ku-name">Jordan Clarkson (PG/SG)</h3>
+      <p class="ku-avg">Avg Fan Score: <strong>—</strong></p>
+      <label class="ku-label" for="clarkson">Your Rating:</label>
+      <select class="ku-select" name="entry.CLARKSON_ID" id="clarkson" required>
+        <option value="" disabled selected>Select your rating</option>
+        <option>10 – GOAT 🐐</option><option>9 – All-Star ⭐️</option><option>8 – Starter 🔥</option>
+        <option>7 – Solid 💪</option><option>6 – Rotation 🔄</option><option>5 – Average 🟰</option>
+        <option>4 – Below Average 💤</option><option>3 – Bench Warmer 🪑</option><option>2 – G-League 🌴</option>
+        <option>1 – Trash 🗑️</option>
+      </select>
+      <button class="ku-submit" type="submit">Submit</button>
+      <div class="ku-confirm">Thanks! Your vote for Jordan Clarkson was recorded.</div>
+    </form>
+
+    <!-- Guerschon Yabusele (F) -->
+    <form class="ku-card" action="https://docs.google.com/forms/d/e/1FAIpQLScvM9p2kU6Lb2551I4epCyUqJ_QvGO7ANAbRnNuAK9fVYhjZA/formResponse" method="POST" target="ku_hidden_submit">
+      <div class="ku-imgwrap">
+        <img class="ku-img" src="https://cdn.nba.com/headshots/nba/latest/1040x760/1627824.png" alt="Guerschon Yabusele">
+      </div>
+      <h3 class="ku-name">Guerschon Yabusele (F)</h3>
+      <p class="ku-avg">Avg Fan Score: <strong>—</strong></p>
+      <label class="ku-label" for="yabusele">Your Rating:</label>
+      <select class="ku-select" name="entry.YABUSELE_ID" id="yabusele" required>
+        <option value="" disabled selected>Select your rating</option>
+        <option>10 – GOAT 🐐</option><option>9 – All-Star ⭐️</option><option>8 – Starter 🔥</option>
+        <option>7 – Solid 💪</option><option>6 – Rotation 🔄</option><option>5 – Average 🟰</option>
+        <option>4 – Below Average 💤</option><option>3 – Bench Warmer 🪑</option><option>2 – G-League 🌴</option>
+        <option>1 – Trash 🗑️</option>
+      </select>
+      <button class="ku-submit" type="submit">Submit</button>
+      <div class="ku-confirm">Thanks! Your vote for Guerschon Yabusele was recorded.</div>
+    </form>
+
+    <!-- Tyler Kolek (PG) -->
+    <form class="ku-card" action="https://docs.google.com/forms/d/e/1FAIpQLScvM9p2kU6Lb2551I4epCyUqJ_QvGO7ANAbRnNuAK9fVYhjZA/formResponse" method="POST" target="ku_hidden_submit">
+      <div class="ku-imgwrap">
+        <img class="ku-img" src="https://cdn.nba.com/headshots/nba/latest/1040x760/1642278.png" alt="Tyler Kolek">
+      </div>
+      <h3 class="ku-name">Tyler Kolek (PG)</h3>
+      <p class="ku-avg">Avg Fan Score: <strong>—</strong></p>
+      <label class="ku-label" for="kolek">Your Rating:</label>
+      <select class="ku-select" name="entry.KOLEK_ID" id="kolek" required>
+        <option value="" disabled selected>Select your rating</option>
+        <option>10 – GOAT 🐐</option><option>9 – All-Star ⭐️</option><option>8 – Starter 🔥</option>
+        <option>7 – Solid 💪</option><option>6 – Rotation 🔄</option><option>5 – Average 🟰</option>
+        <option>4 – Below Average 💤</option><option>3 – Bench Warmer 🪑</option><option>2 – G-League 🌴</option>
+        <option>1 – Trash 🗑️</option>
+      </select>
+      <button class="ku-submit" type="submit">Submit</button>
+      <div class="ku-confirm">Thanks! Your vote for Tyler Kolek was recorded.</div>
+    </form>
+
+    <!-- Pacôme Dadiet (SF) -->
+    <form class="ku-card" action="https://docs.google.com/forms/d/e/1FAIpQLScvM9p2kU6Lb2551I4epCyUqJ_QvGO7ANAbRnNuAK9fVYhjZA/formResponse" method="POST" target="ku_hidden_submit">
+      <div class="ku-imgwrap">
+        <img class="ku-img" src="https://cdn.nba.com/headshots/nba/latest/1040x760/1642359.png" alt="Pacôme Dadiet">
+      </div>
+      <h3 class="ku-name">Pacôme Dadiet (SF)</h3>
+      <p class="ku-avg">Avg Fan Score: <strong>—</strong></p>
+      <label class="ku-label" for="dadiet">Your Rating:</label>
+      <select class="ku-select" name="entry.DADIET_ID" id="dadiet" required>
+        <option value="" disabled selected>Select your rating</option>
+        <option>10 – GOAT 🐐</option><option>9 – All-Star ⭐️</option><option>8 – Starter 🔥</option>
+        <option>7 – Solid 💪</option><option>6 – Rotation 🔄</option><option>5 – Average 🟰</option>
+        <option>4 – Below Average 💤</option><option>3 – Bench Warmer 🪑</option><option>2 – G-League 🌴</option>
+        <option>1 – Trash 🗑️</option>
+      </select>
+      <button class="ku-submit" type="submit">Submit</button>
+      <div class="ku-confirm">Thanks! Your vote for Pacôme Dadiet was recorded.</div>
+    </form>
+
+    <!-- Ariel Hukporti (C) -->
+    <form class="ku-card" action="https://docs.google.com/forms/d/e/1FAIpQLScvM9p2kU6Lb2551I4epCyUqJ_QvGO7ANAbRnNuAK9fVYhjZA/formResponse" method="POST" target="ku_hidden_submit">
+      <div class="ku-imgwrap">
+        <img class="ku-img" src="https://cdn.nba.com/headshots/nba/latest/1040x760/1630574.png" alt="Ariel Hukporti">
+      </div>
+      <h3 class="ku-name">Ariel Hukporti (C)</h3>
+      <p class="ku-avg">Avg Fan Score: <strong>—</strong></p>
+      <label class="ku-label" for="hukporti">Your Rating:</label>
+      <select class="ku-select" name="entry.HUKPORTI_ID" id="hukporti" required>
+        <option value="" disabled selected>Select your rating</option>
+        <option>10 – GOAT 🐐</option><option>9 – All-Star ⭐️</option><option>8 – Starter 🔥</option>
+        <option>7 – Solid 💪</option><option>6 – Rotation 🔄</option><option>5 – Average 🟰</option>
+        <option>4 – Below Average 💤</option><option>3 – Bench Warmer 🪑</option><option>2 – G-League 🌴</option>
+        <option>1 – Trash 🗑️</option>
+      </select>
+      <button class="ku-submit" type="submit">Submit</button>
+      <div class="ku-confirm">Thanks! Your vote for Ariel Hukporti was recorded.</div>
+    </form>
+
+    <!-- Malcolm Brogdon (PG/SG) – hypothetical Knick -->
+    <form class="ku-card" action="https://docs.google.com/forms/d/e/1FAIpQLScvM9p2kU6Lb2551I4epCyUqJ_QvGO7ANAbRnNuAK9fVYhjZA/formResponse" method="POST" target="ku_hidden_submit">
+      <div class="ku-imgwrap">
+        <img class="ku-img" src="https://cdn.nba.com/headshots/nba/latest/1040x760/1627763.png" alt="Malcolm Brogdon">
+      </div>
+      <h3 class="ku-name">Malcolm Brogdon (PG/SG)</h3>
+      <p class="ku-avg">Avg Fan Score: <strong>—</strong></p>
+      <label class="ku-label" for="brogdon">Your Rating:</label>
+      <select class="ku-select" name="entry.BROGDON_ID" id="brogdon" required>
+        <option value="" disabled selected>Select your rating</option>
+        <option>10 – GOAT 🐐</option><option>9 – All-Star ⭐️</option><option>8 – Starter 🔥</option>
+        <option>7 – Solid 💪</option><option>6 – Rotation 🔄</option><option>5 – Average 🟰</option>
+        <option>4 – Below Average 💤</option><option>3 – Bench Warmer 🪑</option><option>2 – G-League 🌴</option>
+        <option>1 – Trash 🗑️</option>
+      </select>
+      <button class="ku-submit" type="submit">Submit</button>
+      <div class="ku-confirm">Thanks! Your vote for Malcolm Brogdon was recorded.</div>
+    </form>
+  </div>
+
+  <p class="ku-footnote">
+    Tip: Replace each <code>name="entry.PLAYER_ID"</code> with the real Google Form field IDs (e.g. <code>entry.123456789</code>).
+    If you recreate the Google Form, remember to update the <code>action</code> URL with your new <code>FORM_ID</code>.
+  </p>
+
+  <script>
+    // Inline confirmation + debounce
+    (function(){
+      document.querySelectorAll('.ku-card').forEach(function(form){
+        var select = form.querySelector('.ku-select');
+        var button = form.querySelector('.ku-submit');
+        var confirm = form.querySelector('.ku-confirm');
+        form.addEventListener('submit', function(){
+          if (button) button.disabled = true;
+          if (confirm) confirm.classList.add('show');
+          setTimeout(function(){
+            if (button) button.disabled = false;
+            if (select) select.selectedIndex = 0;
+          }, 1500);
+        });
+      });
+    })();
+
+    // Auto-resize: report our height to the Squarespace parent
+    (function(){
+      function reportHeight(){
+        try {
+          var h = Math.max(
+            document.body.scrollHeight, document.documentElement.scrollHeight,
+            document.body.offsetHeight, document.documentElement.offsetHeight
+          );
+          parent.postMessage({ type: 'KU_IFRAME_HEIGHT', height: h }, '*');
+        } catch(e){}
+      }
+      window.addEventListener('load', reportHeight);
+      window.addEventListener('resize', reportHeight);
+      setInterval(reportHeight, 1000);
+    })();
+  </script>
+</body>
+</html>
